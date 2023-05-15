@@ -18,6 +18,13 @@ public class MemoryMemberRepository implements MemberRepository {
 
     }
 
+    //    4주차 과제
+    @Override
+    public Member delete(Member member) {
+        store.remove(member.getId());
+        return member;
+    }
+
     @Override
     public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));

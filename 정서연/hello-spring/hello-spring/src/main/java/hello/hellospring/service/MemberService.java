@@ -31,6 +31,11 @@ public class MemberService {
                 });
     }
 
+    // 4주차 과제 회원 삭제
+    public void delete(Member member) {
+        memberRepository.delete(member);
+    }
+
     // 전체 회원 조회
     public List<Member> findMembers() {
         return memberRepository.findAll();
@@ -39,5 +44,4 @@ public class MemberService {
     public Optional<Member> findOne(Long memberId) {
         return memberRepository.findById(memberId);
     }
-
 }
