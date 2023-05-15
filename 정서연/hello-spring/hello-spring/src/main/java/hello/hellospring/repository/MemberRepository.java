@@ -10,6 +10,6 @@ public interface MemberRepository {
     Optional<Member> findById(Long id);
     Optional<Member> findByName(String name);
     List<Member> findAll();
-    //    4주차 과제
-    Member delete(Member member);
+//    //    4주차 과제
+//    Member delete(Member member);
 }

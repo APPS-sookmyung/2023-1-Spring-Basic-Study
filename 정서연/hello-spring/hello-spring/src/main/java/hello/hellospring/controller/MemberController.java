@@ -35,19 +35,19 @@ public class MemberController {
         return "redirect:/";
     }
 
-    //    4주차 과제
-    @GetMapping("/members/delete")
-    public String deleteForm() {
-        return "members/deleteMemberForm";
-    }
-
-    @PostMapping("/mebers/delete")
-    public String delete(MemberForm form) {
-        Member member = new Member(); // member 객체 생성
-        member.setName(form.getName()); // name 설정
-        memberService.delete(member); // delete 메서드 호출
-        return "redirect:/";
-    }
+//    //    4주차 과제
+//    @GetMapping("/members/delete")
+//    public String deleteForm() {
+//        return "members/deleteMemberForm";
+//    }
+//
+//    @PostMapping("/mebers/delete")
+//    public String delete(MemberForm form) {
+//        Member member = new Member(); // member 객체 생성
+//        member.setName(form.getName()); // name 설정
+//        memberService.delete(member); // delete 메서드 호출
+//        return "redirect:/";
+//    }
 
     @GetMapping("/members")
     public String list(Model model) {
